@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact me!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://blog.materialize.pro/wp-content/uploads/2021/10/GOLANG.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #61dafb; /* Go Lang blue */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="submit"] {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #61dafb;
+            color: black;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #21a1f1;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #61dafb;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Send me a message 😁</h2>
+        <form method="POST" action="/form">
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" value=""/>
+            
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" value=""/>
+            
+            <label for="emailAddress">Email Address</label>
+            <input id="emailAddress" name="emailAddress" type="email" value=""/>
+            
+            <label for="phoneNumber">Phone Number</label>
+            <input id="phoneNumber" name="phoneNumber" type="number" value=""/>
+
+            <label for="message">Say anything!</label>
+            <input id="message" name="message" type="text" value=""/>
+            
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+</body>
+</html>
